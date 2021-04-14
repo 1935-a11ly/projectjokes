@@ -1,6 +1,6 @@
 /* jshint esversion: 8 */
 'use strict';
-const BASE_URL =  "http://localhost:5000/api/v1/jokes"
+const BASE_URL =  "http://michaelmusa01.pythonanywhere.com/api/v1/jokes"
 
 async function get_joke() {
     var language = document.getElementById("selLang").value;
