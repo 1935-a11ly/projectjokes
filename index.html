@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Flask App</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body style = "background-image: linear-gradient( 89.7deg, rgba(223,0,0,0.2) 2.7%, rgba(214,91,0,0.2) 15.1%, rgba(233,245,0,0.2) 29.5%, rgba(23,255,17,0.2) 45.8%, rgba(29,255,255,0.2) 61.5%, rgba(5,17,255,0.2) 76.4%, rgba(202,0,253,0.2) 92.4% );">
+    <br>
+    <div>
+        <h2 style = "color: black;text-align: center; font-size:xx-large;font-family: Product Sans;">
+        <span style="color:blue; font-weight:bold;font-size:60px;font-family: Product Sans;">G</span>
+        <span style="color:red;font-weight:bold;font-size:60px;font-family: Product Sans;">O</span>
+        <span style="color:yellow; font-weight:bold;font-size:60px;font-family: Product Sans;">O</span>
+        <span style="color:blue;font-weight:bold;font-size:60px;font-family: Product Sans;">G</span>
+        <span style="color:green;font-weight:bold;font-size:60px;font-family: Product Sans;">L</span>
+        <span style="color:red;font-weight:bold;font-size:60px;font-family: Product Sans;">E</span>
+        <span>&nbsp</span>
+        <span style="color:blue;font-weight:bold;font-size:60px;font-family: Product Sans;"> J</span>
+        <span style="color:red;font-weight:bold;font-size:60px;font-family: Product Sans;">O</span>
+        <span style="color:yellow;font-weight:bold;font-size:60px;font-family: Product Sans;">K</span>
+        <span style="color:blue;font-weight:bold;font-size:60px;font-family: Product Sans;">E</span>
+        <span style="color:green;font-weight:bold;font-size:60px;font-family: Product Sans;">S</span>
+        </h2>
+    </div>
+    <br>
+    <form method="GET" action="">
+    <div class = "mui-container mui--text-center">
+
+        <label for="selCat" value="Category">Category</label>
+        <select name="category" id="selCat" class = "mui-btn mui-btn--danger" style = "margin:25px;">
+            <option value="all">All</option>
+            <option value="neutral">Neutral</option>
+            <option value="chuck">Chuck</option>
+        </select>
+        <label for="selLang" value="Language">Language</label>
+        <select name="language" id="selLang" class = "mui-btn mui-btn--danger" style = "margin:25px;">
+            <option value="en">English</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="es">Spanish</option>
+            <option value="gl">Galician</option>
+        </select>
+        <label for="selNum" value="Number">Joke Number</label>
+        <input type = "number" id="selNum" class = "mui-btn mui-btn--danger" placeholder = "Number" min="1" max="1000" step = "1" style = "margin:25px;">
+    
+        <label for="joke_Identifier" value="jokeID">Joke ID</label>
+        <input type="number" style = "margin:25px;" class = "mui-btn mui-btn--danger" placeholder = "ID" id="jokeId" min="1" max="1000" step = "1" onclick = "disableSelect()">
+
+    </div>
+    </form>
+    <div>
+        <button id="btnAmuse" value="Tell me a joke" class = "mui-btn mui-btn--primary" style = "width:100%; margin-top:25px;" onclick = "get_joke()">Get Jokes</button>
+    </div>
+    <div>
+        <div id = "response"></div>
+    </div>
+</body>
+</html>
